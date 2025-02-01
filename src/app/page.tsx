@@ -17,7 +17,7 @@ interface IQuestion {
 export default function Home() {
   // const users = await prisma.user.findMany();
 
-  const [counter, setCounter] = useState(0);
+  // const [counter, setCounter] = useState(0);
   const [multiples, setMultiples] = useState<number[]>(MULTIPLES);
   const [questionCount, setQuestionCount] = useState<number>(10);
   const [questionPosition, setQuestionPosition] = useState<number | null>(null);
@@ -105,7 +105,6 @@ export default function Home() {
 
   // TODO: amount of questions left
   // timer counting up
-  // format results
   // allow to start another one
 
   console.log("generatedQuestions: ", generatedQuestions);
@@ -208,11 +207,12 @@ export default function Home() {
               {questionPosition + 1 === questionCount ? "Finish" : "Next"}
             </button>
           </form>
+          {/* TODO: add the clock counter 
           <div>
             <span className="countdown font-mono text-6xl">
               <span style={{ "--value": counter }}></span>
             </span>
-          </div>
+          </div> */}
         </>
       ) : (
         <>
